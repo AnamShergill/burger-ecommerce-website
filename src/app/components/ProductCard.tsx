@@ -27,13 +27,15 @@ const ProductCard: React.FC<ProductCardProps> = ({
       <h3 className="text-xl font-semibold mb-2">{name}</h3>
       <p className="text-lg text-slate-600 mb-4">${formattedPrice.toFixed(2)}</p>
 
+      {/* Add to Cart button positioned at the right side of the card */}
       <button
         onClick={() => onAddToCart({ id, name, price: formattedPrice, image })}
-        className="bg-blue-600 text-white px-4 py-2 rounded-lg text-lg shadow-md hover:bg-blue-700 transition duration-300 ease-in-out absolute bottom-4 left-1/2 transform -translate-x-1/2"
+        className="bg-blue-600 text-white px-4 py-2 rounded-lg text-lg shadow-md hover:bg-blue-700 transition duration-300 ease-in-out absolute bottom-4 right-4"
       >
         Add to Cart
       </button>
     </div>
   );
 };
+
 export default ProductCard;
