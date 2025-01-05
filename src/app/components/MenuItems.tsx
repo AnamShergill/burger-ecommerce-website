@@ -107,8 +107,8 @@ const Menu = () => {
       <div className="max-w-6xl mx-auto mt-8">
         <button
           onClick={toggleCart}
-          className="bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 ease-in-out transform"
-        >
+          className="mt-4 bg-blue-600 text-white py-2 px-6 rounded-lg shadow-md hover:bg-blue-800 transition duration-300 ease-in-out transform"
+          >
           {showCart ? "Hide Cart" : "View Cart"} ({cart.length} items)
         </button>
 
@@ -119,7 +119,7 @@ const Menu = () => {
               <div>
                 <ul>
                   {cart.map((product) => (
-                    <li key={product.id} className="flex items-center justify-center mb-6 transform transition-all duration-300 ease-in-out">
+                    <li key={product.id} className="flex items-center justify-between mb-6 transform transition-all duration-300 ease-in-out">
                       <Image
                         src={product.image}
                         alt={product.name}
